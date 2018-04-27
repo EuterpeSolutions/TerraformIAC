@@ -1,0 +1,5 @@
+# The provider code for terraform is system specific and can be installed using
+# `terraform init`
+.terraform/
+
+.git/
