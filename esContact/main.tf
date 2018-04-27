@@ -1,3 +1,9 @@
+variable "source_code_directory" {}
+variable "filename" {
+  type = "string"
+  default = "lambda.zip"
+}
+
 # API Gateway
 resource "aws_api_gateway_rest_api" "api" {
   name = "myapi"
@@ -37,14 +43,11 @@ resource "aws_lambda_permission" "apigw_lambda" {
   source_arn = "arn:aws:execute-api:us-east-1:444317787259:${aws_api_gateway_rest_api.api.id}/*/${aws_api_gateway_method.method.http_method}${aws_api_gateway_resource.resource.path}"
 }
 
-variable "filename" {
-  type = "string"
-  default = "lambda.zip"
-}
+
 
 data "archive_file" "lambda_zip" {
   type = "zip"
-  source_dir = "lambdacode"
+  source_dir = "${var.source_code_directory}"
   output_path = "${var.filename}"
 }
 
