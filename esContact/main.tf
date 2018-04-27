@@ -37,8 +37,19 @@ resource "aws_lambda_permission" "apigw_lambda" {
   source_arn = "arn:aws:execute-api:us-east-1:444317787259:${aws_api_gateway_rest_api.api.id}/*/${aws_api_gateway_method.method.http_method}${aws_api_gateway_resource.resource.path}"
 }
 
+variable "filename" {
+  type = "string"
+  default = "lambda.zip"
+}
+
+data "archive_file" "lambda_zip" {
+  type = "zip"
+  source_dir = "lambdacode"
+  output_path = "${var.filename}"
+}
+
 resource "aws_lambda_function" "lambda" {
-  filename         = "lambda.zip"
+  filename = "${var.filename}"
   function_name    = "mylambda"
   role             = "${aws_iam_role.role.arn}"
   handler          = "index.handler"
