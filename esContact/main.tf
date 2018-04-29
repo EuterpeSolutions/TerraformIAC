@@ -1,4 +1,6 @@
-variable "source_code_directory" {}
+variable "source_code_directory" {
+  default = "lambdacode"
+}
 variable "filename" {
   type = "string"
   default = "lambda.zip"
