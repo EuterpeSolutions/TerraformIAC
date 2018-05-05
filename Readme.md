@@ -8,7 +8,7 @@ for our serverless structure.
 Each project is in a subdirectory and `terraform` runs directory specific.
 
 ### ESContact
-* ESContact is a simple API and Lambda code system that sends contact emails from our Angular contact forms.  
+* A simple API and Lambda code system that sends contact emails from our Angular contact forms.  
 
 ### ESHomepage
 * Uploads the static content for the EuterpeSolutions homepage to an S3 bucket
