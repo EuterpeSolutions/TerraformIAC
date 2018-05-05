@@ -9,8 +9,9 @@ Each project is in a subdirectory and `terraform` runs directory specific.
 
 ### ESContact
 * ESContact is a simple API and Lambda code system that sends contact emails from our Angular contact forms.  
-* Allows us to run static websites out of S3 buckets easily
 
+### ESHomepage
+* Uploads the static content for the EuterpeSolutions homepage to an S3 bucket
 
 ## Credentials
 The `terraform` CLI is configured to look for AWS credentials stored as environment variables or in a `~/.aws/configure` file
