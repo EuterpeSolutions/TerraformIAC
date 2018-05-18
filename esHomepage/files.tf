@@ -89,42 +89,42 @@ resource "aws_s3_bucket_object" "file_10" {
 
 resource "aws_s3_bucket_object" "file_11" {
   bucket = "${aws_s3_bucket.static_site.bucket}"
-  key = "/assets/EuterpeLogo.png"
-  source = "../../EuterpeSolutionsHomepage/dist/assets/EuterpeLogo.png"
+  key = "/assets/apple-apple-background.png"
+  source = "../../EuterpeSolutionsHomepage/dist/assets/apple-apple-background.png"
   content_type = "${lookup(var.mime_types, "png")}"
-  etag = "${md5(file("../../EuterpeSolutionsHomepage/dist/assets/EuterpeLogo.png"))}"
+  etag = "${md5(file("../../EuterpeSolutionsHomepage/dist/assets/apple-apple-background.png"))}"
 }
 
 resource "aws_s3_bucket_object" "file_12" {
   bucket = "${aws_s3_bucket.static_site.bucket}"
-  key = "/assets/homebackground.png"
-  source = "../../EuterpeSolutionsHomepage/dist/assets/homebackground.png"
+  key = "/assets/Logo_Full.png"
+  source = "../../EuterpeSolutionsHomepage/dist/assets/Logo_Full.png"
   content_type = "${lookup(var.mime_types, "png")}"
-  etag = "${md5(file("../../EuterpeSolutionsHomepage/dist/assets/homebackground.png"))}"
+  etag = "${md5(file("../../EuterpeSolutionsHomepage/dist/assets/Logo_Full.png"))}"
 }
 
 resource "aws_s3_bucket_object" "file_13" {
   bucket = "${aws_s3_bucket.static_site.bucket}"
-  key = "/assets/homebackground.jpg"
-  source = "../../EuterpeSolutionsHomepage/dist/assets/homebackground.jpg"
-  content_type = "${lookup(var.mime_types, "jpg")}"
-  etag = "${md5(file("../../EuterpeSolutionsHomepage/dist/assets/homebackground.jpg"))}"
+  key = "/assets/services-background.png"
+  source = "../../EuterpeSolutionsHomepage/dist/assets/services-background.png"
+  content_type = "${lookup(var.mime_types, "png")}"
+  etag = "${md5(file("../../EuterpeSolutionsHomepage/dist/assets/services-background.png"))}"
 }
 
 resource "aws_s3_bucket_object" "file_14" {
   bucket = "${aws_s3_bucket.static_site.bucket}"
-  key = "/assets/LawtonLogoCircle.png"
-  source = "../../EuterpeSolutionsHomepage/dist/assets/LawtonLogoCircle.png"
-  content_type = "${lookup(var.mime_types, "png")}"
-  etag = "${md5(file("../../EuterpeSolutionsHomepage/dist/assets/LawtonLogoCircle.png"))}"
+  key = "/assets/business-background.jpeg"
+  source = "../../EuterpeSolutionsHomepage/dist/assets/business-background.jpeg"
+  content_type = "${lookup(var.mime_types, "jpeg")}"
+  etag = "${md5(file("../../EuterpeSolutionsHomepage/dist/assets/business-background.jpeg"))}"
 }
 
 resource "aws_s3_bucket_object" "file_15" {
   bucket = "${aws_s3_bucket.static_site.bucket}"
-  key = "/assets/LawtonLogo.png"
-  source = "../../EuterpeSolutionsHomepage/dist/assets/LawtonLogo.png"
+  key = "/assets/Logo_Only.png"
+  source = "../../EuterpeSolutionsHomepage/dist/assets/Logo_Only.png"
   content_type = "${lookup(var.mime_types, "png")}"
-  etag = "${md5(file("../../EuterpeSolutionsHomepage/dist/assets/LawtonLogo.png"))}"
+  etag = "${md5(file("../../EuterpeSolutionsHomepage/dist/assets/Logo_Only.png"))}"
 }
 
 resource "aws_s3_bucket_object" "file_16" {
